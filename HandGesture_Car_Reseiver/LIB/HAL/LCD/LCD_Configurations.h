@@ -1,0 +1,17 @@
+#ifndef INCLUDE_HAL_LCD_LCD_CONFIGURATIONS_H_
+#define INCLUDE_HAL_LCD_LCD_CONFIGURATIONS_H_
+
+/*DIO_u8_PORTD, DIO_u8_PORTC, DIO_u8_PORTB, DIO_u8_PORTA*/
+#define LCD_DATA_PORT      DIO_u8_PORTC
+
+/*DIO_u8_PORTD, DIO_u8_PORTC, DIO_u8_PORTB, DIO_u8_PORTA*/
+#define LCD_CONTROL_PORT   DIO_u8_PORTD
+
+/*From DIO_u8_PIN0 to DIO_u8_PIN7*/
+#define RS_PIN              DIO_u8_PIN5
+#define RW_PIN              DIO_u8_PIN4
+#define E_PIN               DIO_u8_PIN3
+
+
+
+#endif /* INCLUDE_HAL_LCD_LCD_CONFIGURATIONS_H_ */
