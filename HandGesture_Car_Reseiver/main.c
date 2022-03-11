@@ -1,20 +1,18 @@
 #include "LIB/MCAL/ADC/ADC_Interface.h"
 #include "LIB/STD_TYPES.h"
 #include "LIB/MCAL/DIO/DIO_Interface.h"
-#include "LIB/MCAL/UART/UART_Interface.h"
+#include "LIB/MCAL/UART_DRIVER/UART_INTERFACE.h"
 #include "LIB/HAL/LCD/LCD_Interface.h"
 
 
 void main(){
-	MDIO_voidSetPortDirection(DIO_u8_PORTA,DIO_u8_OUTPUT);
-	MDIO_voidSetPinValue(DIO_u8_PORTA,DIO_u8_PIN4,DIO_u8_HIGH);
-	//ADC_voidInit();
-	UART_Init();
+	
+	UART_INIT();
 	u8 Private_ResievedData;
 	u8 Private_ScreenDataON=0;
 	while(1)
 	{
-		Private_ResievedData=UART_RecieveData();
+		Private_ResievedData=UART_Recieve();
 
 		switch (Private_ResievedData)
 		{
@@ -69,7 +67,7 @@ void main(){
 				MDIO_voidSetPinValue(DIO_u8_PORTA,DIO_u8_PIN2,DIO_u8_LOW);
 				MDIO_voidSetPinValue(DIO_u8_PORTA,DIO_u8_PIN3,DIO_u8_LOW);
 				HLCD_voidDisplayClear();
-				u8 Private_ScreenDataON=0;
+				Private_ScreenDataON=0;
 
 
 				break;
