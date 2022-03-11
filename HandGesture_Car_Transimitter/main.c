@@ -1,7 +1,7 @@
 #include "LIB/MCAL/ADC/ADC_Interface.h"
 #include "LIB/STD_TYPES.h"
 #include "LIB/MCAL/DIO/DIO_Interface.h"
-#include "LIB/MCAL/UART/UART_Interface.h"
+#include "LIB/MCAL/UART_DRIVER/UART_INTERFACE.h"
 #include "LIB/HAL/FlexSensor/FLEX_Interface.h"
 
 
@@ -9,7 +9,7 @@ void main(){
 
 	HFLEX_voidInit();
 	ADC_voidInit();
-	UART_Init();
+	UART_INIT();
 	while(1)
 	{
 
@@ -21,30 +21,30 @@ void main(){
 
 		if(u8_Finger1>=90&&u8_Finger2>=90&&u8_Finger3>=90&&u8_Finger4<=5)
 		{
-			UART_TransmitData('f');
+			UART_Send('f');
 
 		}
 
 		else if(u8_Finger1<=5&&u8_Finger2>=90&&u8_Finger3>=90&&u8_Finger4>=90)
 		{
-			UART_TransmitData('r');
+			UART_Send('r');
 
 		}
 
 		else if(u8_Finger1>=90&&u8_Finger2>=90&&u8_Finger3<=5&&u8_Finger4<=5)
 		{
-			UART_TransmitData('l');
+			UART_Send('l');
 
 		}
 
 		else if(u8_Finger1>=90&&u8_Finger2>=90&&u8_Finger3>=90&&u8_Finger4>=90)
 		{
-			UART_TransmitData('b');
+			UART_Send('b');
 
 		}
 		else if(u8_Finger1<=15&&u8_Finger2<=15&&u8_Finger3<=15&&u8_Finger4<=15)
 		{
-			UART_TransmitData('s');
+			UART_Send('s');
 
 		}
 
