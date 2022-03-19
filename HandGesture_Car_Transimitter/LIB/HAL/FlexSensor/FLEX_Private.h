@@ -1,5 +1,0 @@
-#ifndef INCLUDE_HAL_FLEX_PRIVATE_H_
-#define INCLUDE_HAL_FLEX_PRIVATE_H_
-
-
-#endif
