@@ -17,3 +17,6 @@ There is two files which contains two seprate programs with their drivers.
   <li><b>Abdullah Khaled Saber</b></li>
 </ul>
 
+<b>Update:</b>
+- We used different ADC and DIO Libraries.
+- We edited in the configuration of the bluetooth module.
